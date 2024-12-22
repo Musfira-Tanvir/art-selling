@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Right Scriptz - quranic calligraphies</title>
+    <link rel="stylesheet" href="cat-style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo1.jpg" alt="Logo" id="logo">
+            <div class="heading-container">
+                <h1>The Right Scriptz</h1>
+                <span class="subheading">Calligraphies by MT</span>
+            </div>
+            <form action="action.php">
+                <input type="search" id="search" name="search" placeholder="Search product">
+                <button type="submit">
+                    <img src="micro.png" alt="search" height="17">
+                </button>
+            </form>
+            <a href="/cart"><img src="cart.png" alt="cart" id="cart-icon"></a><br>
+        </div>
+        
+        <nav class="navigation">
+            <a href="/about">About Us</a>
+            <a href="/newarrivals">New Arrivals</a>
+            <a href="/customform">Customized Order</a>
+            <a href="/contactform">Contact us</a>
+            <a href="/registration" style="font-weight: bold; background-color: #17614f;">Register now!</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>QURANIC CALLIGRAPHIES</h2>
+            <div class="products-container">
+                <% products.forEach(product => { %>
+                    <div class="product-card">
+                        <!-- Reference the image directly from the public folder -->
+                        <img src="/<%= product.image %>" alt="<%= product.name %>">
+                        <h3><%= product.name %></h3>
+                        <p>Price: Rs <%= product.price %></p>
+                        <button class="add-to-cart" data-id="<%= product._id %>" 
+                            data-name="<%= product.name %>" 
+                            data-price="<%= product.price %>">Add to Cart</button>
+                    
+                    </div>
+                <% }) %>
+            </div>
+            
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <img src="insta.png" alt="instagram">
+        <a href="https://www.instagram.com/the_right_scriptz?igsh=MmZ0azg4ODlleXQ3" target="_main">Follow our instagram page here</a>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click', async (e) => {
+            const productId = button.getAttribute('data-id');
+            const productName = button.getAttribute('data-name');
+            const productPrice = button.getAttribute('data-price');
+      
+            const response = await fetch('/add-to-cart', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ productId, productName, productPrice }),
+            });
+      
+            const result = await response.json();
+      
+            if (result.success) {
+              alert('Product added to cart!');
+            } else {
+              alert('Failed to add product to cart.');
+            }
+          });
+        });
+      </script>
+</body>
+</html>

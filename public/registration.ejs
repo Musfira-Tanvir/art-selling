@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - The Right Scriptz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Registration</h1>
+        <p>Fill in your details to create a new account with us.</p>
+
+        <form id="registrationForm" action="/submit-registration" method="POST" onsubmit="return validateRegistrationForm()">
+            <!-- Personal Information Section -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="abc@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <div class="error-message" id="passwordError" style="display: none;">Password must be at least 8 characters long and contain at least one uppercase letter, one number, and one special character.</div>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <div class="error-message" id="confirmPasswordError" style="display: none;">Passwords must match.</div>
+
+            <!-- Additional Information Section -->
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter contact number" required>
+            <div class="error-message" id="phoneError" style="display: none;">Please enter a valid 10-digit phone number.</div>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Your city" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="registrationform.js"></script>
+</body>
+</html>
