@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+button{
+    border: none;    
+    cursor: pointer; 
+    background: none;
+}
+#search{
+    padding: 8px;
+    border-width: 3px;
+    width: 250px;
+    
+}
+header {
+    background-color: #63b594;
+    color: rgb(3, 53, 3);
+    padding: 10px ;
+    max-height: 200px; 
+}
+
+.subheading {
+    font-size: 15pt;
+    color: rgb(16, 90, 58);
+    justify-content: left;
+    margin: -18px 270pt 15pt 16pt;
+    font-family: "Times New Roman", Times, serif;
+    
+}
+
+span {
+    display: flex;
+    align-items: center;
+    font-size: 17pt;
+    margin-bottom: 15px;
+}
+
+#logo {
+    height: 100px; 
+    
+    border-radius: 63px;
+    padding: 6px;
+    margin-left:6pt ;
+}
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    
+    font-size: 28pt;
+    margin-right: 270pt;
+    margin-left: 10pt;
+}
+
+#cart-icon{
+   height: 40px;
+   padding-right:15px;
+   margin-left: 60pt;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #0c342a;
+    padding: 10px 0;
+}
+
+.navigation a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+}
+
+.navigation a:hover {
+    background-color: #564d4d;
+}
+
+
+
+
+/*products*/
+.products-section {
+    text-align: center;
+}
+
+.products-display {
+    position: relative; /* To position buttons inside this container */
+    max-width: 100%; /* Keeps the display within the viewport */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Hides overflowing images */
+    background-color: #f9f9f9; /* Optional: Background for the section */
+}
+
+.product-images {
+    display: flex; /* Enables sliding effect */
+    transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+    width: 100%;
+    height: auto;
+}
+
+.product-item {
+    flex: 0 0 100%; /* Each image takes the full width of the container */
+    max-width: 100%; /* Prevents images from exceeding container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images fill their space without distortion */
+    display: block; /* Avoid extra spacing below images */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+/* SECTION :  categories  */
+.categories-section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin: 17px;
+    font-size: 25pt;
+    color: #164839;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 2s;
+}
+
+#categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category {
+    width: 300px;
+    text-align: center;
+    
+}
+
+.category img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.category figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #083546;
+    font-size: 14pt;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-container {
+    background-color: #0c342a;
+    color: #fff;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;  
+    height: 60px;
+    padding: 0 20px; 
+    position: sticky;
+    width: 100%; 
+    bottom: 0;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.footer-container img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-container a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+

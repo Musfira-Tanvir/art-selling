@@ -1,0 +1,161 @@
+header {
+    background-color: #63b594;
+    color: rgb(3, 53, 3);
+    padding: 10px ;
+    max-height: 200px; 
+}
+
+.subheading {
+    font-size: 15pt;
+    color: rgb(16, 90, 58);
+    justify-content: left;
+    margin: -18px 270pt 15pt 16pt;
+    font-family: "Times New Roman", Times, serif;
+    
+}
+
+span {
+    display: flex;
+    align-items: center;
+    font-size: 17pt;
+    margin-bottom: 15px;
+}
+
+#logo {
+    height: 100px; 
+    
+    border-radius: 63px;
+    padding: 6px;
+    margin-left:6pt ;
+}
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    
+    font-size: 28pt;
+    margin-right: 270pt;
+    margin-left: 10pt;
+}
+
+#cart-icon{
+   height: 40px;
+   padding-right:15px;
+   margin-left: 60pt;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #0c342a;
+    padding: 10px 0;
+}
+
+.navigation a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+}
+
+.navigation a:hover {
+    background-color: #564d4d;
+}
+
+
+
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.add-to-cart {
+    background-color: #63b594;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #4a8a71;
+}
+.footer-container {
+    background-color: #0c342a;
+    color: #fff;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;  
+    height: 60px;
+    padding: 0 20px; 
+    position: sticky;
+    width: 100%; 
+    bottom: 0;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.footer-container img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 25pt;
+    color: #215746;
+}
+.footer-container a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 15pt;
+}
+#search{
+    padding: 8px;
+    border-width: 3px;
+    width: 250px;
+    
+}
+button{
+    border: none;    
+    cursor: pointer; 
+    background: none;
+}

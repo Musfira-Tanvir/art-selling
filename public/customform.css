@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e7f4e4; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 400px;
+}
+
+.form-container {
+    background-color: #f0f8f3; 
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d5e8d0; 
+}
+
+h2 {
+    color: #2f6f3f; 
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #2f6f3f; 
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"], /* Added for phone number styling */
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d0e5d0; 
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f7faf7;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+p {
+    font-size: 14px;
+    color: #2f6f3f; 
+    margin-top: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4caf50; 
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%;
+}
+
+input[type="reset"] {
+    background-color: #ccc; 
+}
+
+input[type="submit"]:hover {
+    background-color: #3a8b3d; 
+}
+
+input[type="reset"]:hover {
+    background-color: #999; 
+}
