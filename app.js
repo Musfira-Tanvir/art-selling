@@ -1,5 +1,4 @@
 const express = require('express');
-const session = require('express-session');
 const bodyParser = require('body-parser'); // Middleware for parsing form data
 const path = require('path'); // Manage file paths
 const mongoose = require('mongoose');
