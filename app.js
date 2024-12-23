@@ -18,11 +18,19 @@ const app = express();
 connectDB();
 
 // Session middleware
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+
+// Use MongoDB as the session store
 app.use(
   session({
-    secret: 'web project', // Replace with a secure key
+    secret: 'web project', // Replace with a strong secret key
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI, // Replace with your MongoDB URI
+    }),
   })
 );
 
@@ -242,7 +250,7 @@ app.post('/cart/delete', (req, res) => {
 
 
 // Start the server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
